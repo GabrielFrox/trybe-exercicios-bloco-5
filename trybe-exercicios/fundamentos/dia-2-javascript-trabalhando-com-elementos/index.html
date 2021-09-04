@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Exercicio 1
+      let body = document.querySelector('body')
+      let h1 = document.createElement('h1')
+      h1.className = 'title'
+      h1.innerText = 'Exercício 5.2 - JavaScript DOM'
+      body.appendChild(h1)
+      // ---------
+      // Exercicio 2
+      let mainCreation = document.createElement('main')
+      mainCreation.className = 'main-content'
+      body.appendChild(mainCreation)
+      // ------------
+      // Exercicio 3
+      let mainCont = document.querySelector('main')
+      let firstSec = document.createElement('section')
+      firstSec.className = 'center-content'
+      mainCont.appendChild(firstSec)
+      firstSec.parentNode.style.backgroundColor = 'green'
+      // ----------
+      // Exercicio 4
+      firstSec = document.querySelector('section')
+      let paragraph1 = document.createElement('p')
+      paragraph1.innerText = 'Um belo texto escrito com muita emoção!'
+      firstSec.appendChild(paragraph1)
+      // ----------
+      // Exercicio 5
+      let secondSec = document.createElement('section')
+      secondSec.className = 'left-content'
+      mainCont.appendChild(secondSec)
+      let secRemoved = mainCont.children[1]
+      mainCont.removeChild(secRemoved)
+      // -----------
+      // Exercicio 6
+      let thirdSec = document.createElement('section')
+      thirdSec.className = 'right-content'
+      mainCont.appendChild(thirdSec)
+      thirdSec.style.marginRight = '20%'
+      // -------------
+      // Exercicio 7
+      let img = document.createElement('img')
+      img.src = 'https://picsum.photos/200'
+      img.className = 'small-image'
+      secondSec.appendChild(img)
+      // --------------
+      // Exercicio 8
+      function liContentCreation(num) {
+        let ext = {
+          0: 'Um',
+          1: 'Dois',
+          2: 'Três',
+          3: 'Quatro',
+          4: 'Cinco',
+          5: 'Seis',
+          6: 'Sete',
+          7: 'Oito',
+          8: 'Nove',
+          9: 'Dez'
+        }
+        return ext[num]
+      }
+      let unordList = document.createElement('ul')
+      thirdSec.appendChild(unordList)
+      for (let index = 0; index < 10; index += 1) {
+        let list = document.createElement('li')
+        list.innerText = liContentCreation(index)
+        unordList.appendChild(list)
+      }
+      let continvr = unordList.children.length
+      for (let indice = 0; indice < 2; indice += 1) {
+        let ret = unordList.children[continvr - 1]
+        continvr -= 1
+        unordList.removeChild(ret)
+      }
+      // -------------
+      // Exercicio 9
+      for (let j = 0; j < 3; j += 1) {
+        let h3 = document.createElement('h3')
+        h3.className = 'description'
+        mainCont.appendChild(h3)
+      }
+      // --------------
+      console.log(mainCont);
+    </script>
+  </body>
+</html>
