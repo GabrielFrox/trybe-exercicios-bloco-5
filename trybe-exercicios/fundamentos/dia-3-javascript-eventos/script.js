@@ -148,3 +148,14 @@ function markUp() {
   })
 }
 markUp()
+
+// Exercicio 10 -------------
+let colorLegend = teste.style.backgroundColor
+
+
+function daysMarker(color) {
+  dias.addEventListener('click', function(event) {
+    event.target.style.backgroundColor = color
+  })
+}
+daysMarker(colorLegend)
