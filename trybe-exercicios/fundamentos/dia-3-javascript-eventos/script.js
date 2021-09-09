@@ -117,11 +117,34 @@ zoomOut()
 // Exercicio 7 ---------------
 let myTasks = document.querySelector('.my-tasks');
 
-function createTasks() {
+function createTasks(elemento) {
   let newTask = document.createElement('span');
-  newTask.innerText = 'Cozinhar';
+  newTask.innerText = elemento;
   myTasks.appendChild(newTask)
 }
-createTasks()
+createTasks('Cozinhar')
 
 // Exercicio 8 --------------
+function legendWithColor(color) {
+  let newdiv = document.createElement('div');
+  newdiv.className = 'task';
+  newdiv.style.backgroundColor = color
+  newdiv.innerHTML = ''
+  myTasks.appendChild(newdiv)
+}
+legendWithColor('blue')
+
+// Exercicio 9 --------------
+let teste = document.querySelector('.task')
+let cont = 0
+function markUp() {
+  myTasks.addEventListener('click', function () {
+    if (teste.classList.value !== 'task selected') {
+      teste.className = 'task selected'
+    }
+    else {
+      teste.className = 'task'
+    }
+  })
+}
+markUp()
