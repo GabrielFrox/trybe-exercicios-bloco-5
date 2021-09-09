@@ -98,3 +98,30 @@ let arrayDeSextas = [4, 11, 18, 25]
 displayFridays(arrayDeSextas)
 
 // Exercicio 6 ---------------
+let dias = document.querySelector('#days')
+
+function zoomIn() {
+  dias.addEventListener('mouseover', function (event){
+    event.target.style.fontSize = '45px'
+  })
+}
+
+function zoomOut() {
+  dias.addEventListener('mouseout', function (event) {
+    event.target.style.fontSize = '20px'
+  })
+}
+zoomIn()
+zoomOut()
+
+// Exercicio 7 ---------------
+let myTasks = document.querySelector('.my-tasks');
+
+function createTasks() {
+  let newTask = document.createElement('span');
+  newTask.innerText = 'Cozinhar';
+  myTasks.appendChild(newTask)
+}
+createTasks()
+
+// Exercicio 8 --------------
