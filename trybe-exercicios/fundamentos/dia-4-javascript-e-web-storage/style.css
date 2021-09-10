@@ -10,6 +10,7 @@ body {
 
 .buttons-container {
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .back-color {
@@ -32,4 +33,9 @@ p {
 
 #fontSize {
   width: 190px;
+}
+
+.main-buttons {
+  height: 50px;
+  width: 90px;
 }

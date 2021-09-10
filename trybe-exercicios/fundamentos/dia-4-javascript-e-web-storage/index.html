@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Exercicios 5.4</title>
     <link rel="stylesheet" href="style.css"/>
@@ -18,13 +22,29 @@
         <button class="back-color">Branco</button>
         <button class="back-color">Amarelo</button>
       </section>
-      <section>
+      <section class="buttons-container">
         <h3>Escolha o tamanho da fonte:</h3>
         <h5>Obs: para voltar ao original, clique em reverter!</h5>
-        <input type=text placeholder="Digite aqui o tamanho desejado" id="fontSize"></input>
+        <input type=text placeholder="Digite aqui o tamanho desejado" id="fontSize">
         <button id="applyFontSize">Aplicar</button>
         <button id="revertFontSize">Reverter</button>
       </section>
+      <section class="buttons-container">
+        <h3>Escolha o espaçamento entre as linhas:</h3>
+        <h5>Obs: para voltar ao original, clique em reverter!</h5>
+        <input type=text placeholder="Digite aqui a distância desejada" id="lineHeight">
+        <button id="applyLineHeight">Aplicar</button>
+        <button id="revertLineHeight">Reverter</button>
+      </section>
+      <section class="buttons-container">
+        <h3>Escolha uma fonte:</h3>
+        <button id="josefin" class="main-buttons">Josefin Sans</button>
+        <button id="marker" class="main-buttons">Permanent Marker</button>
+        <button id="concert" class="main-buttons">Concert One</button>
+        <button id="defaultBtn" class="main-buttons">Voltar ao padrão</button>
+
+      </section>
+      <hr>
       <article>
         <p>
           Quisque id luctus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dolor dolor, sodales in bibendum ut, porttitor vitae ante. Morbi ornare mauris congue urna cursus, sit amet imperdiet tortor viverra. Cras ultricies, odio eget efficitur auctor, lectus nibh finibus quam, vitae fringilla odio diam vel velit. Suspendisse ornare, nisi quis gravida fermentum, justo tortor iaculis risus, consectetur varius leo ipsum vitae nibh. Curabitur rutrum neque vulputate ex tincidunt, ac aliquet ipsum ultricies. Cras et lorem metus. Maecenas malesuada id nulla ac sagittis.
